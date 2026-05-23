@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
 		"axis_top": "create:block/axis_top",
 		"fan_blades": "dndesires:block/industrial_fan_blades",

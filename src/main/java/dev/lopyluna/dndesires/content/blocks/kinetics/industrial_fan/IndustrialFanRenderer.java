@@ -26,6 +26,8 @@ public class IndustrialFanRenderer extends KineticBlockEntityRenderer<Industrial
         var direction = be.getBlockState().getValue(FACING);
         var vb = buffer.getBuffer(RenderType.cutoutMipped());
 
+        if (DesiresPartialModels.INDUSTRIAL_FAN_POWER.get() == null || DesiresPartialModels.INDUSTRIAL_FAN_INNER.get() == null) return;
+
         int lightOverall = LevelRenderer.getLightColor(level, be.getBlockPos());
         int lightInFront = LevelRenderer.getLightColor(level, be.getBlockPos().relative(direction));
 
