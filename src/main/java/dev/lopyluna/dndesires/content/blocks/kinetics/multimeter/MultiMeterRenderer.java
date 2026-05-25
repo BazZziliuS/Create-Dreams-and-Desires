@@ -27,6 +27,7 @@ public class MultiMeterRenderer extends ShaftRenderer<MultiMeterBE> {
 		var state = be.getBlockState();
 
         var model = DesiresPartialModels.MULTIMETER_HEAD;
+		if (model.get() == null || AllPartialModels.GAUGE_DIAL.get() == null) return;
 		var headBuffer = CachedBuffers.partial(model, state);
 		var dialBuffer = CachedBuffers.partial(AllPartialModels.GAUGE_DIAL, state);
 
