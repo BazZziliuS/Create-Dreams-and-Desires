@@ -46,6 +46,10 @@ public class OmniGearboxRenderer extends KineticBlockEntityRenderer<OmniGearboxB
         shafts.put(Direction.SOUTH, state.getValue(OmniGearboxBlock.SOUTH_SHAFT));
         shafts.put(Direction.WEST, state.getValue(OmniGearboxBlock.WEST_SHAFT));
 
+        if (DesiresPartialModels.TOP_PANEL.get() == null || DesiresPartialModels.BOTTOM_PANEL.get() == null
+                || DesiresPartialModels.NORTH_PANEL.get() == null || DesiresPartialModels.EAST_PANEL.get() == null
+                || DesiresPartialModels.SOUTH_PANEL.get() == null || DesiresPartialModels.WEST_PANEL.get() == null) return;
+
         for (var direction : Iterate.directions) {
             if (shafts.get(direction)) {
                 var axis = direction.getAxis();
